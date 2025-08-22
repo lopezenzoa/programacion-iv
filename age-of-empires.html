@@ -4,20 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Age of Empires</title>
+    <link rel="stylesheet" href="age-of-empires.css">
 </head>
 <body>
     <!-- Titulo -->
-    <h1>Age of Empires</h1>
-    <img src="https://i.blogs.es/0b3236/age-of-empires-2-captura/840_560.jpg" width="440" height="340" >
+    <header>
+        <h1>Age of Empires</h1>
+        <img src="https://i.blogs.es/0b3236/age-of-empires-2-captura/840_560.jpg" >
+    </header>
 
     <!-- Descripcion -->
-    <section>
+    <section class="descripcion">
         <h2>Descripcion</h2>
         <p>Age of Empires es un videojuego de estrategia en tiempo real para computadoras personales, el primero de la serie homónima. El jugador puede elegir entre 12 civilizaciones y guiarla desde la Edad de Piedra hasta la Edad del Hierro.</p>
     </section>
 
     <!-- Caracteristicas principales -->
-    <section>
+    <section class="caracteristicas">
         <h2>Caracteristicas principales</h2>
         <ul>
             <li>Posee diversos modos de juegos: un jugador y multijugador.</li>
@@ -30,16 +33,22 @@
     <!-- Informacion tecnica -->
     <section>
         <h2>Informacion tecnica</h2>
-        <dl>
-            <dt>Plataforma</dt>
-            <dd>- Microsoft Windows, Mac OS X, Windows Mobile</dd>
-    
-            <dt>Lanzamiento</dt>
-            <dd>- 26 de octubre de 1997</dd>
-    
-            <dt>Genero</dt>
-            <dd>- Videojuego de estrategia en tiempo real</dd>
-        </dl>
+        <table class="Mytable">
+            <thead>
+                <tr>
+                    <th>Plataforma</th>
+                    <th>Lanzamiento</th>
+                    <th>Genero</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Microsoft Windows, Mac OS X, Windows Mobile</td>
+                    <td>26 de octubre de 1997</td>
+                    <td>Videojuego de estrategia en tiempo real</td>
+                </tr>
+            </tbody>
+        </table>
     </section>
 
     <!-- Enlaces utiles -->
@@ -55,10 +64,8 @@
     </section>
 
     <!-- Footer -->
-    <section>
-        <footer>
-            <p>© 2025 UTN - Ejemplo de HTML5</p>
-        </footer>
-    </section>
+    <footer>
+        <p>© 2025 UTN - Ejemplo de HTML5</p>
+    </footer>
 </body>
 </html>

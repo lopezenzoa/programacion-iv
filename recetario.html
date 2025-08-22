@@ -4,22 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="recetario.css">
     <title>Lasagna - By Ailen</title>
 </head>
 
 <body>
     <!--  Nav -->
-    <nav>
+    <nav class="navegacion">
         <h1>Recetario by Ailen</h1>
-        <form>
+        <form class="buscador-recetas">
             <label for="">
-                <input type="text" name="busqueda" id="busqueda" placeholder="Ingrese el nombre de la receta.">
+                <input type="text" name="busqueda" id="busqueda" placeholder="Ingrese el nombre de la receta">
             </label>
 
             <button type="submit">Buscar</button>
         </form>
+    </nav>
 
-        <ul>
+    <!-- Header -->
+    <header class="header">
+        <h2 id="titulo">Lasagna</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRjCnEj8ga3_zb4XhCuNyXm9oke8Q2ZDSGQA&s"
+            alt="Plato de lasagna terminado">
+    </header>
+
+    <nav>
+        <ul class="lista-navegacion">
             <li>
                 <a href="#ingredientes">Ingredientes</a>
             </li>
@@ -37,13 +47,6 @@
             </li>
         </ul>
     </nav>
-
-    <!-- Header -->
-    <header>
-        <h2>Lasagna</h2>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRjCnEj8ga3_zb4XhCuNyXm9oke8Q2ZDSGQA&s"
-            alt="Plato de lasagna terminado">
-    </header>
 
     <main>
         <!-- Lista de ingredientes -->

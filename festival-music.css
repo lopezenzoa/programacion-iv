@@ -1,0 +1,233 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
+    background-color: #3b3b3b;
+    color: white;
+}
+
+header {
+    background-image: url("https://www.turismecv.com/wp-content/uploads/sites/13/2022/04/Festival-1500x430-1.png");
+    background-position: bottom;
+    padding: 2%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header>h1 {
+    padding: 0 3%;
+    color: white;
+}
+
+.logo-spotify-container {
+    width: 5%;
+}
+
+.logo-spotify {
+    width: 75px;
+    height: 75px;
+}
+
+.logo-spotify:hover {
+    width: 80px;
+    height: 80px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10%;
+
+    text-align: right;
+
+    width: 5%;
+}
+
+nav a {
+    color: white;
+    margin: 2% 0;
+    text-decoration: none;
+}
+
+nav a:hover {
+    font-weight: bold;
+}
+
+/* Contenido ppal */
+main {
+    height: 100vh;
+    margin: 2%;
+}
+
+.guests-artists>ul {
+    list-style: none;
+
+}
+
+li {
+    margin: 1% 0;
+    background-color: grey;
+    padding: 1%;
+    width: 20%;
+}
+
+#map>img {
+    width: 400px;
+    height: 500px;
+
+    display: block;
+    margin: 3% auto;
+}
+
+.history-images {
+    margin: 3%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    gap: 1%;
+}
+
+.history-images img {
+    width: 100%;
+    height: 100%;
+}
+
+.event-date {
+    padding: 1%;
+    text-align: center;
+
+    background-color: white;
+    color: black;
+}
+
+#ubication>img {
+    width: 475px;
+    height: 275px;
+
+    display: block;
+    margin: 3% auto;
+}
+
+#ubication>a {
+    display: block;
+    text-align: center;
+
+    margin: 0 32%;
+
+    padding: 1%;
+    border: 0.125rem solid white;
+
+    color: white;
+    text-decoration: none;
+}
+
+#ubication>a:hover {
+    background-color: white;
+    color: black;
+}
+
+#register {
+    height: 60%;
+}
+
+.register-form {
+    margin: 3% 15%;
+
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+
+    row-gap: 30%;
+    column-gap: 2%;
+}
+
+.register-form input {
+    height: 120%;
+    padding: 1%;
+}
+
+.comments {
+    grid-column: 1 / span 2;
+}
+
+.register-form button {
+    display: block;
+    width: 35%;
+
+    grid-column: 1 / span 2;
+
+    margin: 0 auto;
+
+    border: 0.125rem solid white;
+    background-color: transparent;
+    color: white;
+}
+
+.register-form button:hover {
+    background-color: white;
+    color: black;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+
+    height: 6%;
+    width: 100%;
+
+    background-color: grey;
+    color: white;
+
+    padding: 0.125% 2%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-networks {
+    width: 20.5%;
+}
+
+.social-networks a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        height: fit-content;
+    }
+
+    .social-networks {
+        margin: 1.5% 0;
+    }
+
+    .social-networks a {
+        display: block;
+        text-decoration: none;
+        color: white;
+    }
+
+    #register {
+        height: 100%;
+    }
+}
+
+@media (min-width: 1025px) {
+    .social-networks a {
+        margin: 0 1%;
+
+        text-decoration: none;
+        color: white;
+    }
+}

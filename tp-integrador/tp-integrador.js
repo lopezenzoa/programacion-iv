@@ -3,73 +3,65 @@ const listaTarjetas = document.getElementById("listaTarjetas");
 
 
 async function obtenerAnimes() {
-    try{
+    try {
         // Lista de animes
         let data;
 
-        const animes = await fetch("https://api.jikan.moe/v4/anime")
-        .then((res) => res.json())
-        .then((animes) => data = animes.data);
+        await fetch("https://api.jikan.moe/v4/anime")
+            .then((res) => res.json())
+            .then((animes) => data = animes.data);
 
         data.forEach(element => {
             // como algunos datos no tenian anio ... 
             const anioPublicacion = element.year ? element.year.toString() : "-";
 
             // Construir cada tarjeta con la info de la API
-            listaTarjetas.innerHTML += 
-            `<div class="contenedorTarjeta">
+            listaTarjetas.innerHTML +=
+                `<div class="contenedorTarjeta">
                 <img src=${element.images.jpg.image_url} alt=""  class="imagenTarjeta">
                 <h2 class="tituloTarjeta">${element.title}</h2>
                 <p class="anioPublicacion">${anioPublicacion}</p>
-                <a href="tp-integrador-detalle.html" class="verMas">ver mas</a>
+                <a href="tp-integrador-detalle.html?id=${element.mal_id.toString()}" class="verMas">ver mas</a>
             </div>`;
         });
-
-        document.appendChild(listaTarjetas);
-    } catch(error) {
+    } catch (error) {
         console.log(error);
     }
 }
 
 obtenerAnimes();
 
+async function buscarAnimePorNombre(nombre) {
+    let data;
 
-// PAGINA DE DETALLE (ver mas)
-const detalleAnime = document.getElementById("detalleAnime");
+    await fetch("https://api.jikan.moe/v4/anime")
+        .then((res) => res.json())
+        .then((animes) => data = animes.data);
 
-async function obtenerAnimePorId(id) {
-    try {
-        const anime = await fetch(`https://api.jikan.moe/v4/anime/${id}`);
-        const animeJSON = await anime.json();
+    const animesFiltrados = data.filter((element) => element.title.toUpperCase() === nombre.toUpperCase());
 
-        const data = animeJSON.data;
+    animesFiltrados.forEach((anime) => {
+        // como algunos datos no tenian anio ... 
+        const anioPublicacion = anime.year ? anime.year.toString() : "-";
 
-        const anioPublicacion = data.year ? data.year.toString() : "-";
-
-        console.log(data);
-
-        detalleAnime.innerHTML = `<h1 class="tituloTarjeta">${data.title}</h1>
-            <img src=${data.images.jpg.image_url} alt=""  class="imagenTarjeta">
-
-            <h3>Episodios</h3>
-            <p class="episodios">${data.episodes}</p>
-
-            <h3>Año de Publicacion</h3>
-            <p class="anioPublicacion">${anioPublicacion}</p>
-
-            <h3>Estado</h3>
-            <p class="estado">${data.status}</p>
-
-            <h3>Sinopsis</h3>
-            <p class="sinopsis">${data.synopsis}</p>`;
-
-        document.appendChild(detalleAnime);
-
-    } catch (error) {
-        console.log("El anime con id " + id + " no se encontro");
-    }
-    
+        // Renderizando los elementos en el HTML
+        listaTarjetas.innerHTML = `<div class="contenedorTarjeta">
+                <img src=${anime.images.jpg.image_url} alt=""  class="imagenTarjeta">
+                <h2 class="tituloTarjeta">${anime.title}</h2>
+                <p class="anioPublicacion">${anioPublicacion}</p>
+                <a href="tp-integrador-detalle.html?id=${anime.mal_id.toString()}" class="verMas">ver mas</a>
+            </div>`;
+    });
 }
 
 
-obtenerAnimePorId(1);
+// Busqueda de animes
+const buscadorAnime = document.getElementById("buscadorAnime");
+const botonBuscar = document.getElementById("botonBuscar");
+
+// Capturar el evento del boton
+botonBuscar.addEventListener("click", async (evento) => {
+    evento.preventDefault(); // Evita que se recargue la pagina
+
+    buscarAnimePorNombre(buscadorAnime.value);
+});

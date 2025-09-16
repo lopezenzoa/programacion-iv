@@ -29,10 +29,17 @@ header button {
 }
 
 .contenedorTarjeta {
-    padding: 2%;
+    padding: 1%;
     border: 5px solid brown;
     text-align: center;
+
+    max-width: 200px;
+
+    /* border-radius: 16px; /* No queda bien */
+    background-color: brown;
+    color: white;
 }
+
 
 img {
     width: 100%;
@@ -41,36 +48,57 @@ img {
 }
 
 .contenedorTarjeta a {
-    color: brown;
+    color: white;
     text-decoration: none;
     padding: 2%;
     font-weight: 700;
     text-transform: uppercase;
-   
 }
 
 .contenedorTarjeta a:hover {
-    background-color: brown;
-    color: white;
+    background-color: white;
+    color: brown;
 }
 
 /* Detalle Anime */
 #detalleAnime {
-    text-align: center;
+    margin: 10%;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 #detalleAnime img {
-    margin: 2%;
-
-    width: 60%;
-    height: 60%;
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    
+    object-fit: contain; /* Esto es para que la imagen crezca automaticamente cuando se agrande el contenedor */
 }
 
 #detalleAnime h1 {
     margin-top: 5%;
+    color: brown;
 }
 
-#detalleAnime h3 {
-    margin-top: 5%;
+#detalleAnime h2 {
+    margin-top: 2%;
+    padding: auto;
+
+    color: brown;
+}
+
+.tituloDetalle {
+    width: 100%;
+}
+
+.contenidoDetalle {
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.contenidoDetalle section {
+    border-bottom: 5px solid brown;
 }

@@ -1,0 +1,115 @@
+:root {
+    --color-fondo-acento: #00BCA1;
+    --color-fondo: #bffffb;
+
+    --color-letra: black;
+    --color-letra-acento: #00847b;
+
+    --color-tarjeta: #00bcb0;
+}
+
+
+body {
+    /* Propiedades básicas del padding */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    background-color: var(--color-fondo);
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* El header y el footer van a estar acentuado */
+header, footer {
+    padding: 1%;
+    text-align: center;
+    background-color: var(--color-fondo-acento);
+
+    color: var(--color-letra);
+}
+
+.buscador {
+    text-align: center;
+}
+
+/* Afecto a todos los elementos dentro de la seccion del buscador */
+.buscador * {
+    padding: 1.5%;
+    border-radius: 3%;
+}
+
+.buscador input {
+    width: 20%;
+}
+
+.buscador button {
+    background-color: var(--color-fondo-acento);
+    border: none;
+}
+
+.buscador button:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+/* Grilla de peliculas */
+main {
+    padding: 1%;
+
+    margin-bottom: 5%;
+}
+
+.grillaPeliculas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1%;
+
+    margin-top: 5%;
+}
+
+.tarjetaPelicula {
+    padding: 5%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    background-color: var(--color-tarjeta);
+    color: black;
+}
+
+.tarjetaPelicula img {
+    object-fit: contain;
+
+    width: 75%;
+    height: 75%;
+}
+
+/* Boton de eliminar */
+.tarjetaPelicula button {
+    margin-top: 5%;
+    border: none;
+
+    padding: 3%;
+
+    background-color: var(--color-fondo);
+}
+
+.tarjetaPelicula button:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+footer {
+    width: 100%;
+
+    color: white;
+    
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}

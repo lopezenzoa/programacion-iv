@@ -1,0 +1,7 @@
+<div class="tarjeta-pais" (click)="agregarPaisFavorito(pais)">
+    <img [src]="pais().escudo.png" [alt]="pais().escudo.alt">
+    <!-- La siguiente imagen no se muestra porque sirve para almacenar los atributos de la bandera -->
+    <!-- De esta forma, evito el consumo repetido de la API -->
+    <img class="bandera" [src]="pais().bandera.png" [alt]="pais().bandera.alt">
+    <h3>{{ pais().nombre }}</h3>
+</div>

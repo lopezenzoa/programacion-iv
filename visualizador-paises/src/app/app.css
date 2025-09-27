@@ -1,0 +1,30 @@
+header, footer {
+    padding: 2%;
+    text-align: center;
+    background-color: var(--color-fondo-acento);
+    color: white;
+}
+
+/* Estilos especificos para el footer */
+footer {
+    padding: 0.125rem;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+}
+
+main {
+    margin: 5%;
+    margin-bottom: 25%;
+}
+
+hr {
+    margin: 10%;
+}
+
+h2 {
+    margin-bottom: 3%;
+}

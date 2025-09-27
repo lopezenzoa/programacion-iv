@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --color-fondo-acento: black;
+    --color-letra: white;
+
+    --color-tarjeta: rgb(218, 218, 218);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+}

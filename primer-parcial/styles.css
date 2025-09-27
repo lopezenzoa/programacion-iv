@@ -1,0 +1,112 @@
+:root {
+    --color-fondo-acento: black;
+    --color-letra: white;
+
+    --color-tarjeta: rgb(218, 218, 218);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header, footer {
+    padding: 2%;
+    text-align: center;
+    background-color: var(--color-fondo-acento);
+    color: white;
+}
+
+/* Estilos especificos para el footer */
+footer {
+    padding: 0.125rem;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+}
+
+main {
+    margin: 5%;
+    margin-bottom: 25%;
+}
+
+h2 {
+    margin-bottom: 3%;
+}
+
+/* Tarjeta de la lista de paises */
+.tarjeta-pais {
+    margin-top: 1%;
+    padding: 1%;
+    border: 1px solid var(--color-fondo-acento);
+
+    /* Estilos de dentro de la tarjeta */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--color-tarjeta);
+
+    border-radius: 3px;
+
+    min-height: fit-content;
+    height: 5%;
+}
+
+.tarjeta-pais:hover {
+    background-color: var(--color-letra);
+    cursor: pointer;
+}
+
+.tarjeta-pais h3 {
+    margin-right: 5%;
+}
+
+.tarjeta-pais img {
+    width: 5%;
+    height: 5%;
+
+    object-fit: contain;
+
+    margin-left: 2%;
+}
+
+.bandera {
+    display: none;
+}
+
+hr {
+    margin: 10%;
+}
+
+/* Seccion de grilla de banderas favoritas */
+.grilla-banderas {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    column-gap: 5%;
+    row-gap: 15%;
+
+    text-align: center;
+}
+
+.grilla-banderas img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 5px;
+
+    max-height: 150px;
+    max-width: 150px;
+
+    border: 1px solid var(--color-tarjeta);
+}

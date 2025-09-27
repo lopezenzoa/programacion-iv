@@ -1,0 +1,19 @@
+<header>
+  <h1>Visualizador de paises</h1>
+</header>
+<main>
+  <section>
+    <app-lista-paises (paisFavorito)="agregarPaisAFavoritos($event)"/>
+  </section>
+
+  <hr>
+
+  <section>
+    <app-grilla-favoritos [paisesFavoritos]="paises()" />
+  </section>
+</main>
+<footer>
+  <p>Simulacro Parcial -- 2025</p>
+</footer>
+
+<router-outlet />

@@ -1,0 +1,4 @@
+<h2>Lista de paises</h2>
+@for (pais of paises; track $index) {
+    <app-tarjeta-pais [pais]="pais" (click)="marcarPaisFavorito(pais)" />
+}

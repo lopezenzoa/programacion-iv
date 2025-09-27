@@ -1,0 +1,8 @@
+<h2>Paises favoritos</h2>
+<div class="grilla-banderas">
+    @if (paisesFavoritos().length > 0) {
+        @for (pais of paisesFavoritos(); track $index) {
+            <img class="bandera-favoritos" [src]="pais.bandera.png" [alt]="pais.bandera.alt"/>
+        }
+    }
+</div>

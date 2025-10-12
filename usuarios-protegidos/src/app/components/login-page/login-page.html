@@ -1,7 +1,9 @@
 <section>
-    <form action="">
-        <input type="text" name="" id="" placeholder="Enter your username...">
-        <input type="password" name="" id="" placeholder="Enter your password...">
+    <form action="" (submit)="login($event)">
+        <!-- (input) = se ejecuta cuando detecta un cambio en el input -->
+        <!-- (change) = se ejecuta una vez que el cambio se finalizó o commiteado -->
+        <input type="text" name="" id="" placeholder="Enter your username..." (input)="setUsername($event)">
+        <input type="password" name="" id="" placeholder="Enter your password..." (input)="setPassword($event)">
         <button>Login</button>
     </form>
 </section>

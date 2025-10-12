@@ -7,12 +7,23 @@ section {
     gap: 5%;
 }
 
+section a {
+    width: fit-content;
+
+    text-decoration: none;
+    color: black;
+}
+
 section div {
     width: fit-content;
 
-    padding: 0 20%;
+    padding: 0 35%;
     border: 1px solid black;
 
     text-transform: uppercase;
     text-align: center;
+}
+
+section div:hover {
+    text-decoration: underline;
 }

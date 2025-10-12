@@ -1,9 +1,11 @@
 <section>
     @for (user of usersList(); track $index) {
-    <div>
-        <p>{{ user.id }}</p>
-        <p>{{ user.name }}</p>
-        <p>{{ user.email }}</p>
-    </div>
+    <a routerLink="/users/{{ user.id }}">
+        <div>
+            <p>{{ user.id }}</p>
+            <p>{{ user.name }}</p>
+            <p>{{ user.email }}</p>
+        </div>
+    </a>
     }
 </section>

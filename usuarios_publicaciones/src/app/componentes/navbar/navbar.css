@@ -1,0 +1,19 @@
+nav{
+    padding: 1%;
+    background-color: brown;
+    display: flex;
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.links a{
+    color: white;
+    text-decoration: none;
+    padding-bottom: 10%;  
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+}

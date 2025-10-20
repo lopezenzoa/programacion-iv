@@ -1,0 +1,5 @@
+<section>
+    @for(user of listaUsuario(); track $index) {
+        <app-user-card [user]="user" (selected)="mostrarUsuario($event)"/>
+    }
+</section>

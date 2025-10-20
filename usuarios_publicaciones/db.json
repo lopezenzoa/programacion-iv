@@ -1,0 +1,33 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Alice",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "name": "Bob",
+      "role": "user"
+    },
+    {
+      "id": 3,
+      "name": "Charlie",
+      "role": "user"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "userId": 1,
+      "title": "Angular Tips",
+      "content": "Aprendiendo Signals"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "title": "Rutas y Guards",
+      "content": "Protegiendo caminos"
+    }
+  ]
+}

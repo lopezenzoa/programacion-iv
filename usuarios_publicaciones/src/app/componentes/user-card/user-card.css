@@ -1,0 +1,22 @@
+div {
+    border: 2px solid black;
+    padding: 1%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: antiquewhite;
+}
+
+div:hover {
+    cursor: pointer;
+}
+
+div p {
+    border-radius: 5px;
+    background-color: brown;
+    color: white;
+    padding: 1%;
+    margin: 0;
+}
+

@@ -1,0 +1,30 @@
+<section>
+    <form action="" (submit)="createUser($event)" [formGroup]="form">
+        <div>
+            <input type="text" name="name" id="" placeholder="Enter the name..." formControlName="name">
+            <label for="name">Name</label>
+        </div>
+
+        <div>
+            <input type="text" name="email" id="" placeholder="Enter the email..." formControlName="email">
+            <label for="email">Email</label>
+        </div>
+
+        <button [disabled]="form.invalid">ADD</button>
+    </form>
+
+    @if (successMsg()) {
+        <p class="successMsg">User Created Successfully!</p>
+
+        <div>
+            <!-- Esta estructura la saco de users-page.html y tendría que ser un componente reutilizable -->
+            <a routerLink="/users/{{ newUser().id }}">
+            <div class="user-card">
+                <p>{{ newUser().id }}</p>
+                <p>{{ newUser().name }}</p>
+                <p>{{ newUser().email }}</p>
+            </div>
+        </a>
+        </div>
+    }
+</section>

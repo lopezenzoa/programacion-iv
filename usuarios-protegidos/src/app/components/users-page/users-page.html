@@ -1,11 +1,15 @@
 <section>
-    @for (user of usersList(); track $index) {
-    <a routerLink="/users/{{ user.id }}">
-        <div>
-            <p>{{ user.id }}</p>
-            <p>{{ user.name }}</p>
-            <p>{{ user.email }}</p>
-        </div>
-    </a>
-    }
+    <div class="users-list">
+        @for (user of usersList(); track $index) {
+        <a routerLink="/users/{{ user.id }}">
+            <div class="user-card">
+                <p>{{ user.id }}</p>
+                <p>{{ user.name }}</p>
+                <p>{{ user.email }}</p>
+            </div>
+        </a>
+        }
+    </div>
+
+    <button routerLink="/users/new">ADD NEW USER</button>
 </section>

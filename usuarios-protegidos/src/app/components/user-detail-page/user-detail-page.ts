@@ -12,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 export class UserDetailPage {
   usersService = inject(UsersService);
   route: ActivatedRoute = inject(ActivatedRoute);
-  user: WritableSignal<User | undefined> = signal<User>({ id: 0, name: "", email: "" });
+  user: WritableSignal<User | undefined> = signal<User>({ id: null, name: undefined, email: undefined });
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get("id");

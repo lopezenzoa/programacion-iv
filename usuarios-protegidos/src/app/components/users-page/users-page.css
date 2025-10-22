@@ -1,10 +1,8 @@
 section {
     margin: 5%;
 
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-
-    gap: 5%;
+    display: flex;
+    flex-direction: column;
 }
 
 section a {
@@ -14,16 +12,42 @@ section a {
     color: black;
 }
 
-section div {
-    width: fit-content;
+.users-list {
+    width: 10%;
+}
+
+.user-card {
+    width: 100%;
 
     padding: 0 35%;
     border: 1px solid black;
+
+    margin: 5% 0;
 
     text-transform: uppercase;
     text-align: center;
 }
 
-section div:hover {
+section .user-card:hover {
     text-decoration: underline;
 }
+
+button {
+    margin-top: 5%;
+
+    width: 25%;
+    padding: 1.5%;
+
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+
+    cursor: pointer;
+}
+
+

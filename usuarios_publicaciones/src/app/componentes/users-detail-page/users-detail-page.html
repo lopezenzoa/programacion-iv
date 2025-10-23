@@ -1,0 +1,5 @@
+<section>
+    <h2>{{ user()?.name }}</h2>
+    <h3 [class.role-admin]="isAdmin()">{{ user()?.role }}</h3>
+    <p>{{ userId }}</p>
+</section>

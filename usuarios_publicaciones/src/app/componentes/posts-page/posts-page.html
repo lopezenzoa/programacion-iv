@@ -1,5 +1,9 @@
 <div>
     @for (post of posts(); track $index) {
-        <app-post-card [post]="post"/>
+        <app-post-card [post]="post" />
+    }
+
+    @if(posts().length === 0) {
+        <p>El usuario no cuenta con aún con ningun posteo</p>
     }
 </div>

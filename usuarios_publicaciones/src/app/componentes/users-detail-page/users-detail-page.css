@@ -1,0 +1,11 @@
+section {
+    margin: 5%;
+}
+
+.role-admin {
+    color: brown;
+}
+
+.role-user {
+    color: black;
+}

@@ -13,7 +13,30 @@ nav{
     padding-bottom: 10%;  
 }
 
+.links a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .links{
     display: flex;
     flex-direction: column;
+}
+
+button {
+    background-color: brown;
+
+    border: none;
+    border-radius: 3px;
+
+    padding: 2%;
+    color: white;
+
+    font-size: medium;
+    text-align: left;
+}
+
+button:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }

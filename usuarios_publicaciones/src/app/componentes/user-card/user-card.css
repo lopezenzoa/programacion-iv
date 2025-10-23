@@ -8,10 +8,6 @@ div {
     background-color: antiquewhite;
 }
 
-div:hover {
-    cursor: pointer;
-}
-
 div p {
     border-radius: 5px;
     background-color: brown;
@@ -20,3 +16,23 @@ div p {
     margin: 0;
 }
 
+.links {
+    border: none;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    margin: 2% 0;
+}
+
+.links a {
+    text-decoration: underline;
+    color: black;
+    margin-left: 4%;
+}
+
+.links a:hover {
+    text-decoration: underline;
+    color: brown;
+}

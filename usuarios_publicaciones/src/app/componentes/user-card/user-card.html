@@ -1,4 +1,8 @@
-<div (click)="seleccionarUsuario()">
+<div>
     <h3>{{ user()?.name }}</h3>
     <p>{{user()?.role}}</p>
+    <div class="links">
+        <a routerLink="/users/{{ user()?.id }}">Detalle</a>
+        <a (click)="seleccionarUsuario()">Publicaciones</a>
+    </div>
 </div>

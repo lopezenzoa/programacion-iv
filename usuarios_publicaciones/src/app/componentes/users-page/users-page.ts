@@ -1,5 +1,5 @@
 import { Component, inject, signal } from '@angular/core';
-import { UsersService } from '../../servicios/users-service';
+import { UsersService } from '../../servicios/UsersService/users-service';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { User } from '../../../modelos/User';
 import { UserCard } from '../user-card/user-card';

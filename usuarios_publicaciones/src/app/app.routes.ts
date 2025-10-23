@@ -2,6 +2,8 @@ import { Routes } from '@angular/router';
 import { UsersPage } from './componentes/users-page/users-page';
 import { HomePage } from './componentes/home-page/home-page';
 import { PostsPage } from './componentes/posts-page/posts-page';
+import { UsersDetailPage } from './componentes/users-detail-page/users-detail-page';
+import { authGuard } from './guards/AuthGuard/auth-guard';
 
 export const routes: Routes = [
     {
@@ -11,12 +13,15 @@ export const routes: Routes = [
         path: "home", component: HomePage
     },
     {
-        path: "posts", component: PostsPage
+        canActivate: [authGuard], path: "posts", component: PostsPage
     },
     {
-        path: "posts/:id", component: PostsPage
+        canActivate: [authGuard], path: "posts/:id", component: PostsPage
     },
     {
-        path: "**", component: HomePage
+        path: "users/:id", component: UsersDetailPage
+    },
+    {
+        path: "**", component: UsersPage
     }
 ];

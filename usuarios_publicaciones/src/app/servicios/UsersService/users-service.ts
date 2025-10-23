@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
-import { User } from '../../modelos/User';
+import { User } from '../../../modelos/User';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +15,7 @@ export class UsersService {
 
   getById(id: number): Observable<User[]> {
     return this.getAll().pipe(
-      map((users: User[]) => users.filter((u: User) => u.id === id))
+      map((users: User[]) => users.filter((u: User) => u.id == id))
     );
   }
 }

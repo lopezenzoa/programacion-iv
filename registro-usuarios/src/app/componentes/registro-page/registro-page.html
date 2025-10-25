@@ -1,0 +1,65 @@
+<form action="" [formGroup]="form" (ngSubmit)="submit()">
+    <div>
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" formControlName="nombre">
+    </div>
+
+    @if (form.get("nombre")?.hasError('required') && form.get("nombre")?.touched) {
+    <p>El nombre es requerido</p>
+    }
+
+    @if (form.get("nombre")?.hasError('minlength') && form.get("nombre")?.touched) {
+    <p>El nombre tiene que tener un minimo de 3 dígitos</p>
+    }
+
+    <div>
+        <label for="email">Email</label>
+        <input type="email" name="email" formControlName="email">
+    </div>
+
+    @if (form.get("email")?.hasError('required') && form.get("email")?.touched) {
+    <p>El email es requerido</p>
+    }
+
+    @if (form.get("email")?.hasError('email') && form.get("email")?.touched) {
+    <p>El email tiene que tener un formato válido</p>
+    }
+
+    <div>
+        <label for="password">Contraseña</label>
+        <input type="password" name="password" formControlName="password">
+    </div>
+
+    @if (form.get("password")?.hasError('required') && form.get("password")?.touched) {
+    <p>La contraseña es requerida</p>
+    }
+
+
+    @if (form.get("password")?.hasError('minlength') && form.get("password")?.touched) {
+    <p>La contraseña tiene que tener un minimo de 6 dígitos</p>
+    }
+
+    <div>
+        <label for="confirmPassword">Confirmar Password</label>
+        <input type="password" name="confirmPassword" formControlName="confirmPassword">
+    </div>
+
+    @if (form.get("confirmPassword")?.hasError('required') && form.get("confirmPassword")?.touched) {
+    <p>La confirmación de la contraseña es requerida</p>
+    }
+
+
+    @if (form.hasError('noCoinciden') && form.get("confirmPassword")?.touched) {
+    <p>Las contraseñas no coinciden</p>
+    }
+
+    @if (form.get("email")?.hasError('emailExistente') && form.get("email")?.touched) {
+        <p>El email ya está registrado</p>
+    }
+
+    <button [disabled]="form.invalid">Registrar</button>
+
+    @if (mensajeExito()) {
+        <p class="mensajeExito">El usuario fue agregado con exito!</p>
+    }
+</form>

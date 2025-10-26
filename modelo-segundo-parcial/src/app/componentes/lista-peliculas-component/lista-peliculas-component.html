@@ -1,0 +1,8 @@
+<section class="movies-list">
+    <h2>Películas cargadas</h2>
+    <div class="list">
+        @for (pelicula of peliculas(); track $index) {
+            <app-pelicula-card-component [pelicula]="pelicula"/>
+        }
+    </div>
+</section>

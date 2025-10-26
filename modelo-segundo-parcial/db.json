@@ -1,0 +1,16 @@
+{
+  "movies": [
+    {
+      "id": "1",
+      "title": "Inception",
+      "description": "Un ladrón que roba secretos a través de los sueños.",
+      "duration": 148
+    },
+    {
+      "id": "2",
+      "title": "Interstellar",
+      "description": "Un grupo viaja a través de un agujero de gusano para salvar a la humanidad.",
+      "duration": 169
+    }
+  ]
+}

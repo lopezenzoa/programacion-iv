@@ -1,0 +1,22 @@
+<section class="form-container">
+    <h2>Cargar nueva película</h2>
+    <form [formGroup]="form" (ngSubmit)="guardarPelicula()">
+        <div class="form-group">
+            <label for="title">Título</label>
+            <input id="title" type="text" formControlName="title">
+            <small>Debe tener al menos 3 caracteres</small>
+        </div>
+        <div class="form-group">
+            <label for="description">Descripción</label>
+            <textarea id="description" rows="4" formControlName="description"></textarea>
+            <small>Este campo es obligatorio</small>
+        </div>
+        <div class="form-group">
+            <label for="duration">Duración (min)</label>
+            <input id="duration" type="number" formControlName="duration">
+        </div>
+        <div class="form-actions">
+            <button type="submit" [disabled]="form.invalid">Guardar Película</button>
+        </div>
+    </form>
+</section>
